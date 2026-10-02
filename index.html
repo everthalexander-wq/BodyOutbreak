@@ -15,10 +15,13 @@
         <div class="panel-section">
           <label for="pathogenSelect">Pathogen</label>
           <select id="pathogenSelect">
-            <option value="virus">Virus</option>
-            <option value="bacteria">Bacteria</option>
-            <option value="fungus">Fungus</option>
-            <option value="parasite">Parasite</option>
+            <option value="covid">SARS-CoV-2</option>
+            <option value="influenza">Influenza</option>
+            <option value="tuberculosis">Tuberculosis</option>
+            <option value="ecoli">E. coli</option>
+            <option value="candida">Candida</option>
+            <option value="naegleria">Naegleria fowleri</option>
+            <option value="malaria">Plasmodium</option>
           </select>
         </div>
 
@@ -31,6 +34,18 @@
             <option value="contact">Direct contact</option>
             <option value="food">Food / ingestion</option>
             <option value="blood">Bloodstream</option>
+          </select>
+        </div>
+
+        <div class="panel-section">
+          <label for="attackModeSelect">Attack target</label>
+          <select id="attackModeSelect">
+            <option value="organ">Organ</option>
+            <option value="veins">Veins</option>
+            <option value="arteries">Arteries</option>
+            <option value="brain">Brain / nervous system</option>
+            <option value="immune">Immune system</option>
+            <option value="systemic">Whole body</option>
           </select>
         </div>
 
@@ -74,9 +89,18 @@
             <strong id="selectedOrganText">Bloodstream</strong>
           </div>
           <div>
+            <span class="info-label">Attack mode:</span>
+            <strong id="attackModeText">Organ</strong>
+          </div>
+          <div>
             <span class="info-label">Status:</span>
             <strong id="statusText">System stable</strong>
           </div>
+        </div>
+
+        <div class="detail-box">
+          <h2>Pathogen profile</h2>
+          <div id="pathogenDetail">Loading profile...</div>
         </div>
 
         <div class="log-box">

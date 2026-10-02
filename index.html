@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Body Outbreak</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="hud-panel">
+        <h1>Body Outbreak</h1>
+        <p class="tagline">Infect the body. Break the immune system.</p>
+
+        <div class="panel-section">
+          <label for="pathogenSelect">Pathogen</label>
+          <select id="pathogenSelect">
+            <option value="virus">Virus</option>
+            <option value="bacteria">Bacteria</option>
+            <option value="fungus">Fungus</option>
+            <option value="parasite">Parasite</option>
+          </select>
+        </div>
+
+        <div class="panel-section">
+          <label for="routeSelect">Route of transmission</label>
+          <select id="routeSelect">
+            <option value="airborne">Airborne</option>
+            <option value="water">Waterborne</option>
+            <option value="insect">Insect bite</option>
+            <option value="contact">Direct contact</option>
+            <option value="food">Food / ingestion</option>
+            <option value="blood">Bloodstream</option>
+          </select>
+        </div>
+
+        <div class="controls">
+          <button id="spreadBtn">Spread</button>
+          <button id="mutateBtn">Mutate</button>
+          <button id="immuneBtn">Attack immune</button>
+          <button id="advanceBtn">End turn</button>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <span class="label">Stage</span>
+            <strong id="stageValue">Asymptomatic</strong>
+          </div>
+          <div class="stat-box">
+            <span class="label">Outbreak</span>
+            <strong id="outbreakValue">0%</strong>
+          </div>
+          <div class="stat-box">
+            <span class="label">Body</span>
+            <strong id="bodyHealthValue">100</strong>
+          </div>
+          <div class="stat-box">
+            <span class="label">Immunity</span>
+            <strong id="immuneValue">100</strong>
+          </div>
+          <div class="stat-box wide">
+            <span class="label">Turn</span>
+            <strong id="turnValue">1</strong>
+          </div>
+        </div>
+      </aside>
+
+      <main class="game-panel">
+        <canvas id="gameCanvas" width="860" height="720"></canvas>
+
+        <div class="info-bar">
+          <div>
+            <span class="info-label">Selected organ:</span>
+            <strong id="selectedOrganText">Bloodstream</strong>
+          </div>
+          <div>
+            <span class="info-label">Status:</span>
+            <strong id="statusText">System stable</strong>
+          </div>
+        </div>
+
+        <div class="log-box">
+          <h2>Mission log</h2>
+          <ul id="logList"></ul>
+        </div>
+      </main>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
